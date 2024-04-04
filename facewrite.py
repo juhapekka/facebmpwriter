@@ -59,11 +59,12 @@ try:
         # Display the resulting frame
         cv2.imshow('Face Detection', frame)
 
+        key = cv2.waitKey(1) & 0xFF
         # Press 'q' to exit
-        if cv2.waitKey(1) & 0xFF == ord('q'):
+        if key == ord('q'):
             break
         # Press 's' to start saving images
-        elif cv2.waitKey(1) & 0xFF == ord('s'):
+        elif key == ord('s'):
             save_images = True
 
 finally:
